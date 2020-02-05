@@ -14,13 +14,13 @@ export class AppMenuComponent implements OnInit {
     model: any[];
 
 
-    constructor(public app: AppprincComponent) {
+    constructor(public app: AppprincComponent, private translate: TranslateService) {
     }
 
     ngOnInit() {
         this.model = [
             {
-                label: 'Trabajadores', routerLink: ['/trabaj'], icon: ''
+                label: this.translate.instant('menu.trabaja'), routerLink: ['/trabaj'], icon: ''
             }
         ];
     }
