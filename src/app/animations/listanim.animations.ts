@@ -304,20 +304,15 @@ export const derAIzAderButAnimationWait = trigger('derAIzAderButAnimationWait', 
 ]);
 export const derAIzAderButAnimation = trigger('derAIzAderButAnimation', [
     transition(':enter', [
-        style({transform: 'translateX(-20%)', opacity: 0}),
-        animate(
-            '0.3s ease-out',
-            style({opacity: 0})
-        ),
+        style({transform: 'translateY(50%)', opacity: 0}),
         animate(
             '0.4s ease-out',
-            style({transform: 'translateX(0%)', opacity: 1})
+            style({transform: 'translateY(0%)', opacity: 1})
         )
-    ]),
-    transition(':leave', [
-        style({opacity: 0}),
     ])
 ]);
+
+
 export const IzAderAIzButAnimation = trigger('IzAderAIzButAnimation', [
     transition(':enter', [
         style({transform: 'translateX(20%)', opacity: 0}),

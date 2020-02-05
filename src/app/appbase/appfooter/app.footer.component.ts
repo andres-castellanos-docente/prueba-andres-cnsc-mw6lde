@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import { derAIzAnimation} from '../../animations/listanim.animations';
+import { IzADerAnimation} from '../../animations/listanim.animations';
 
 @Component({
     selector: 'app-footer',
     templateUrl: './app.footer.component.html', styleUrls: ['./app.footer.scss'],
-    animations: [derAIzAnimation]
+    animations: [IzADerAnimation]
 })
 export class AppFooterComponent {
 }
