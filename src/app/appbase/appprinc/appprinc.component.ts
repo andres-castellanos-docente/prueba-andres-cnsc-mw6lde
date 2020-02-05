@@ -1,7 +1,6 @@
 import { Component} from '@angular/core';
 
 
-
 @Component({
     selector: 'app-princroot',
     templateUrl: './appprinc.component.html'
@@ -21,13 +20,6 @@ export class AppprincComponent  {
 
     onMaskClick(event: Event) {
         this.sidebarActive = !this.sidebarActive;
-        if (this.sidebarActive) {
-            $('#princ').addClass('layout-overlay-active');
-            $('#divmask').addClass('disblock');
-        } else {
-            $('#princ').removeClass('layout-overlay-active');
-            $('#divmask').removeClass('disblock');
-        }
         event.preventDefault();
     }
 
