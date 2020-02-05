@@ -1,15 +1,15 @@
 {
   "footer": {
-    "Label": "Prueba: Andres Castellanos"
+    "label": "Prueba: Andres Castellanos"
   },
   "menu": {
-    "Trabaja": "Trabajadores"
+    "trabaja": "Trabajadores"
   },
   "crear": {
-    "CrearTrab": "Crear Trabajador"
+    "creartrab": "Crear Trabajador"
   },
   "but": {
-    "Crear": "Crear",
-    "Cancel": "Cancelar"
+    "crear": "Crear",
+    "cancel": "Cancelar"
   }
 }
