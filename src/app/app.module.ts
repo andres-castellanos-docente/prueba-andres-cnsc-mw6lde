@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import {AppprincComponent} from "./appbase/appprinc/appprinc.component";
 import {AppClockComponent} from "./appbase/appclock/app.clock.component";
 import {AppFooterComponent} from "./appbase/appfooter/app.footer.component";
@@ -32,7 +31,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
       deps: [HttpClient]
     }
   })],
-  declarations: [AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, BlankComponent,  HelloComponent],
+  declarations: [AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, BlankComponent],
   providers: [AppXsegundoService, AppLoadingService, DatePipe],
   bootstrap:    [ AppComponent ]
 })
