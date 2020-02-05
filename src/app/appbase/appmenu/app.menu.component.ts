@@ -3,6 +3,7 @@ import {AppprincComponent} from '../appprinc/appprinc.component';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {derAIzAderButAnimation, subirAnimation, subirAnimationMenu} from '../../animations/listanim.animations';
 import {MenuItem} from 'primeng/api';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
     selector: 'app-menu',
@@ -16,11 +17,10 @@ export class AppMenuComponent implements OnInit {
     constructor(public app: AppprincComponent) {
     }
 
-
     ngOnInit() {
         this.model = [
             {
-                label: 'Home', routerLink: ['/home'], icon: ''
+                label: 'Trabajadores', routerLink: ['/trabaj'], icon: ''
             }
         ];
     }

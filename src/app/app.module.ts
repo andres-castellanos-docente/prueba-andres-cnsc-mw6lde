@@ -13,26 +13,29 @@ import {AppTopBarComponent} from "./appbase/apptopbar/app.topbar.component";
 import {RouterModule} from "@angular/router";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate/core";
 import {AppRoutes} from "./app.routes";
-import {BlankComponent} from "./formas/blank/blank.component";
+import {TrabajadoresComponent, TrabajadoresDialog} from "./formas/trabajadores/trabajadores.component";
 import {AppLoadingService} from "./appbase/apploading/app.loading.service";
 import {AppXsegundoService} from "./appbase/appclock/app.xsegundo.service";
 import {DatePipe} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule,
-    BrowserAnimationsModule, AppRoutes,
+    BrowserAnimationsModule, AppRoutes, MatDialogModule, MatFormFieldModule,
     TranslateModule.forRoot({
-    loader: {
-      provide: TranslateLoader,
-      useFactory: HttpLoaderFactory,
-      deps: [HttpClient]
-    }
-  })],
-  declarations: [AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, BlankComponent],
-  providers: [AppXsegundoService, AppLoadingService, DatePipe],
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })],
+  entryComponents: [TrabajadoresDialog],
+  declarations: [AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog],
+  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

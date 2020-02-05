@@ -1,3 +1,7 @@
 {
-    "footer.Label": "Prueba: Andres Castellanos"
+    "footer.Label": "Prueba: Andres Castellanos",
+    "menu.Trabaja": "Trabajadores",
+    "crear.CrearTrab": "Crear Trabajador",
+    "but.Crear": "Crear",
+    "but.Cancel": "Cancelar"
 }

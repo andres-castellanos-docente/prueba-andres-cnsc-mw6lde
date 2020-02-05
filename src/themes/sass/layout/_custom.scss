@@ -1,7 +1,7 @@
 $primaryLighterColor: #FFE0B2;
-$primaryColorRed: #d00103;
-$primaryDarkerColor: #f10103;
-$primaryDarkestColor: #f10103;
+$primaryColorRed: #2196F3;
+$primaryDarkerColor: #2196F3;
+$primaryDarkestColor: #2196F3;
 $primaryColorText: #ffffff;
 $colorFieldsets:  #447ca8;
 $linkcolor: #2939a8;
@@ -1645,7 +1645,7 @@ a:hover {
 
 .textjustify{
 
-text-align: justify;
+    text-align: justify;
 }
 
 .comboinvalid {
@@ -2012,25 +2012,25 @@ a:focus {
 }
 
 @media screen and (min-width: 10px) {
-.ui-inputcust {
+    .ui-inputcust {
         width: 120px!important;
     }
 }
 
 @media screen and (min-width: 355px) {
-.ui-inputcust {
+    .ui-inputcust {
         width: 160px!important;
     }
 }
 
 @media screen and (min-width: 10px) {
-.ui-autocomplete-input {
+    .ui-autocomplete-input {
         width: 80px !important;
     }
 }
 
 @media screen and (min-width: 355px) {
-.ui-autocomplete-input {
+    .ui-autocomplete-input {
         width: 125px !important;
     }
 }
@@ -2054,13 +2054,13 @@ a:focus {
 .autocomp {
 }
 @media screen and (min-width: 10px) {
-.autocomp {
+    .autocomp {
         width: 84px!important;
     }
 }
 
 @media screen and (min-width: 355px) {
-.autocomp {
+    .autocomp {
         width: 125px!important;
     }
 }
@@ -2117,7 +2117,7 @@ a:focus {
 }
 
 @media screen and (min-width: 10px) {
-.ui-dropdowndob3 {
+    .ui-dropdowndob3 {
         width:84px !important;
     }
 }
@@ -2125,19 +2125,19 @@ a:focus {
 
 
 @media screen and (min-width: 355px) {
-.ui-dropdowndob3 {
+    .ui-dropdowndob3 {
         width: 200px !important;
     }
 }
 
 
 @media screen and (min-width: 640px) {
-.ui-dropdowndob3 {
+    .ui-dropdowndob3 {
         width: 300px !important;
     }
 }
 @media screen and (min-width: 1050px) {
-.ui-dropdowndob3 {
+    .ui-dropdowndob3 {
         width: 300px !important;
     }
 }
@@ -2154,20 +2154,20 @@ a:focus {
 
 
 @media screen and (min-width: 10px) {
-.ui-dropdowndob5 {
+    .ui-dropdowndob5 {
         width:84px !important;
     }
 }
 
 @media screen and (min-width: 320px) {
-.ui-dropdowndob5 {
+    .ui-dropdowndob5 {
         width: 260px !important;
     }
 }
 
 
 @media screen and (min-width: 355px) {
- .ui-dropdowndob5 {
+    .ui-dropdowndob5 {
         width: 300px !important;
     }
 }
@@ -2183,19 +2183,19 @@ a:focus {
 }
 
 @media screen and (min-width: 10px) {
-.ui-inputdosc {
+    .ui-inputdosc {
         width: 120px;
     }
 }
 
 @media screen and (min-width: 355px) {
-.ui-inputdosc {
+    .ui-inputdosc {
         width: 160px !important;
     }
 }
 
 @media screen and (min-width: 640px) {
-.ui-inputdosc {
+    .ui-inputdosc {
         width: 200px !important;
     }
 }
@@ -2237,7 +2237,7 @@ a:focus {
 }
 
 @media screen and (min-width: 1050px) {
-   .ui-inputdob {
+    .ui-inputdob {
         width: 330px !important;
     }
 
@@ -2293,3 +2293,21 @@ a:focus {
 }
 
 
+.paddingtop10 {
+    padding-top:10px;
+}
+
+.flexcontent{
+    display:flex;
+}
+.paddingtop14 {
+    padding-top:14px;
+}
+
+.ui-inputdob{
+    width: 300px!important;
+}
+
+.marginauto{
+    margin: auto;
+}

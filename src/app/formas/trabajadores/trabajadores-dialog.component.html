@@ -1,0 +1,12 @@
+﻿<h1 mat-dialog-title>{{'crear.CrearTrab' | translate}} </h1>
+<div mat-dialog-content>
+    <form autocomplete="off" >
+    <!--mat-form-field>
+        <input matInput>
+    </mat-form-field-->
+    </form>
+</div>
+<div mat-dialog-actions class="marginauto">
+    <button mat-button class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray marginauto" (click)="onNoClick()">{{'but.Crear' | translate}}</button>
+    <button mat-button class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray marginauto" [mat-dialog-close]="data" cdkFocusInitial>{{'but.Cancel' | translate}}</button>
+</div>

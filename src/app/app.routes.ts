@@ -1,7 +1,7 @@
 import {Routes, RouterModule} from '@angular/router';
 import {ModuleWithProviders} from '@angular/core';
 import {AppprincComponent} from "./appbase/appprinc/appprinc.component";
-import {BlankComponent} from "./formas/blank/blank.component";
+import {TrabajadoresComponent} from "./formas/trabajadores/trabajadores.component";
 
 
 export const routes: Routes = [
@@ -9,7 +9,8 @@ export const routes: Routes = [
 
         path: '', component: AppprincComponent,
         children: [
-            {path: '', component: BlankComponent, canActivate: []}]
+            {path: '', component: TrabajadoresComponent, canActivate: []},
+            {path: 'trabaj', component: TrabajadoresComponent, canActivate: []}]
     },
     {path: '**', redirectTo: ''}
 ];
