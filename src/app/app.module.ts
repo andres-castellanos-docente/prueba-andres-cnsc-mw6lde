@@ -51,10 +51,10 @@ import {ConfirmDialogComponent} from "./appbase/confirm-dialog/confirm-dialog.co
         deps: [HttpClient]
       }
     })],
-  entryComponents: [TrabajadoresDialog,ConfirmDialogComponent],
+  entryComponents: [ConfirmDialogComponent,TrabajadoresDialog],
   declarations: [// Directivas
     PreventDoubleClickDirective, OnlyNumerosDirective, OnlyDatesDirective, OnlyStringsDirective,
-    AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog, ConfirmDialogComponent],
+    AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, ConfirmDialogComponent, TrabajadoresComponent, TrabajadoresDialog],
   providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService,{ provide: MatDialogRef, useValue: {} },
     { provide: MAT_DIALOG_DATA, useValue: {} }, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
   bootstrap:    [ AppComponent ]

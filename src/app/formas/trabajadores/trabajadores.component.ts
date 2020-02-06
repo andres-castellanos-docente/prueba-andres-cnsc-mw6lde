@@ -13,7 +13,7 @@ import {Message} from "primeng/api";
 import {trabajadorModel} from "./trabajador.model";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {ConfirmDialogComponent, ConfirmDialogModel} from "../../appbase/confirm-dialog/confirm-dialog.component";
+import {ConfirmDialogComponent, ConfirmDialogModel} from "src/app/appbase/confirm-dialog/confirm-dialog.component";
 
 
 export interface DialogData {
