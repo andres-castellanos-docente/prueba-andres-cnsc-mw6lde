@@ -6,7 +6,22 @@
     "trabaja": "Trabajadores"
   },
   "crear": {
-    "creartrab": "Crear Trabajador"
+    "creartrab": "Crear Trabajador",
+    "nombrecomp": "Nombre Completo",
+    "fechanac": "Fecha Nacimiento",
+    "fechagrad": "Fecha Grado",
+    "edad": "Edad",
+    "meses": "Meses",
+    "anios": "Años",
+    "email": "Email",
+    "emailformat": "Formato Email Incorrecto",
+    "emailformatdet": "(Ej: pruebacnsc@gmail.com)",
+    "direccion": "Dirección",
+    "direccionformat": "Formato Dirección Incorrecto",
+    "direccionformatdet": "(Ej: Calle 61-4-22)",
+    "exp": "Experiencia",
+    "debverf": "Upps! Debes Ingresar/Validar la Siguiente Información para Continuar"
+
   },
   "but": {
     "crear": "Crear",

@@ -1,8 +1,8 @@
 $colorButtonAuto: #525765;
 $colorButtonDelete: #c43500;
 $colorInputInvalid: rgb(196, 36, 36);
-$primaryDarkerColor: #f10103;
-$primaryColor:#d00103;
+$primaryDarkerColor: #11558e;
+$primaryColor: #2196F3;
 $primaryColorRed: #ad0103;
 
 mat-badge-content {
@@ -783,7 +783,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-warn .mat-option.mat-selected:not(.mat-option-disabled) {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-optgroup-label {
@@ -820,7 +820,7 @@ textarea.cdk-textarea-autosize-measuring {
 
 .mat-warn .mat-pseudo-checkbox-checked,
 .mat-warn .mat-pseudo-checkbox-indeterminate {
-    background: #f44336
+    background: #447ca8
 }
 
 .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled,
@@ -977,7 +977,7 @@ textarea.cdk-textarea-autosize-measuring {
 
 .mat-badge-warn .mat-badge-content {
     color: #fff;
-    background: #f44336
+    background: #447ca8
 }
 
 .mat-badge {
@@ -1195,7 +1195,7 @@ textarea.cdk-textarea-autosize-measuring {
 .mat-button.mat-warn,
 .mat-icon-button.mat-warn,
 .mat-stroked-button.mat-warn {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-button.mat-accent[disabled],
@@ -1228,7 +1228,7 @@ textarea.cdk-textarea-autosize-measuring {
 .mat-button.mat-warn .mat-button-focus-overlay,
 .mat-icon-button.mat-warn .mat-button-focus-overlay,
 .mat-stroked-button.mat-warn .mat-button-focus-overlay {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-button[disabled] .mat-button-focus-overlay,
@@ -1318,7 +1318,7 @@ textarea.cdk-textarea-autosize-measuring {
 .mat-flat-button.mat-warn,
 .mat-mini-fab.mat-warn,
 .mat-raised-button.mat-warn {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-fab.mat-accent[disabled],
@@ -1513,7 +1513,7 @@ textarea.cdk-textarea-autosize-measuring {
 
 .mat-checkbox-checked.mat-warn .mat-checkbox-background,
 .mat-checkbox-indeterminate.mat-warn .mat-checkbox-background {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-checkbox-disabled.mat-checkbox-checked .mat-checkbox-background,
@@ -1550,7 +1550,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-checkbox:not(.mat-checkbox-disabled).mat-warn .mat-checkbox-ripple .mat-ripple-element {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-chip.mat-standard-chip {
@@ -1594,7 +1594,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-chip.mat-standard-chip.mat-chip-selected.mat-warn {
-    background-color: #f44336;
+    background-color: #447ca8 ;
     color: #fff
 }
 
@@ -1741,7 +1741,7 @@ th.mat-header-cell {
 }
 
 .mat-datepicker-content.mat-warn .mat-calendar-body-selected {
-    background-color: #f44336;
+    background-color: #447ca8 ;
     color: #fff
 }
 
@@ -1766,7 +1766,7 @@ th.mat-header-cell {
 }
 
 .mat-datepicker-toggle-active.mat-warn {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-dialog-container {
@@ -1835,7 +1835,7 @@ th.mat-header-cell {
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field.mat-focused .mat-form-field-label.mat-accent {
@@ -1843,7 +1843,7 @@ th.mat-header-cell {
 }
 
 .mat-form-field.mat-focused .mat-form-field-label.mat-warn {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-focused .mat-form-field-required-marker {
@@ -1863,7 +1863,7 @@ th.mat-header-cell {
 }
 
 .mat-form-field.mat-focused .mat-form-field-ripple.mat-warn {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-form-field-type-mat-native-select.mat-focused:not(.mat-form-field-invalid) .mat-form-field-infix::after {
@@ -1875,25 +1875,25 @@ th.mat-header-cell {
 }
 
 .mat-form-field-type-mat-native-select.mat-focused:not(.mat-form-field-invalid).mat-warn .mat-form-field-infix::after {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker,
 .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent {
-    color: #f44336;
+    color: #447ca8 ;
 }
 
 .mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
 .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-error {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field-appearance-legacy .mat-form-field-label {
@@ -1961,11 +1961,11 @@ th.mat-header-cell {
 }
 
 .mat-form-field-appearance-outline.mat-focused.mat-warn .mat-form-field-outline-thick {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-label {
@@ -1985,7 +1985,7 @@ th.mat-header-cell {
 }
 
 .mat-icon.mat-warn {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field-type-mat-native-select .mat-form-field-infix::after {
@@ -2023,12 +2023,12 @@ th.mat-header-cell {
 
 .mat-form-field-invalid .mat-input-element,
 .mat-warn .mat-input-element {
-    caret-color: #f44336;
-    border: 1px solid #EF5350;
+    caret-color: #EF5350 ;
+    background-image: linear-gradient(to bottom, #EF5350, #EF5350), linear-gradient(to bottom, #EF5350, #EF5350);
 }
 
 .mat-form-field-type-mat-native-select.mat-form-field-invalid .mat-form-field-infix::after {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-list-base .mat-list-item {
@@ -2146,7 +2146,7 @@ th.mat-header-cell {
 }
 
 .mat-progress-bar.mat-warn .mat-progress-bar-fill::after {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-progress-spinner circle,
@@ -2161,7 +2161,7 @@ th.mat-header-cell {
 
 .mat-progress-spinner.mat-warn circle,
 .mat-spinner.mat-warn circle {
-    stroke: #f44336
+    stroke: #447ca8
 }
 
 .mat-radio-outer-circle {
@@ -2191,14 +2191,14 @@ th.mat-header-cell {
 }
 
 .mat-radio-button.mat-warn.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #f44336
+    border-color: #447ca8
 }
 
 .mat-radio-button.mat-warn .mat-radio-inner-circle,
 .mat-radio-button.mat-warn .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
 .mat-radio-button.mat-warn.mat-radio-checked .mat-radio-persistent-ripple,
 .mat-radio-button.mat-warn:active .mat-radio-persistent-ripple {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-radio-button.mat-radio-disabled .mat-radio-outer-circle,
@@ -2256,11 +2256,11 @@ th.mat-header-cell {
 }
 
 .mat-form-field.mat-focused.mat-warn .mat-select-arrow {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field .mat-select.mat-select-invalid .mat-select-arrow {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-form-field .mat-select.mat-select-disabled .mat-select-arrow {
@@ -2333,7 +2333,7 @@ th.mat-header-cell {
 }
 
 .mat-slide-toggle.mat-warn.mat-checked .mat-slide-toggle-thumb {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-slide-toggle.mat-warn.mat-checked .mat-slide-toggle-bar {
@@ -2341,7 +2341,7 @@ th.mat-header-cell {
 }
 
 .mat-slide-toggle.mat-warn.mat-checked .mat-ripple-element {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-slide-toggle:not(.mat-checked) .mat-ripple-element {
@@ -2384,7 +2384,7 @@ th.mat-header-cell {
 .mat-warn .mat-slider-thumb,
 .mat-warn .mat-slider-thumb-label,
 .mat-warn .mat-slider-track-fill {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-warn .mat-slider-thumb-label-text {
@@ -2483,7 +2483,7 @@ th.mat-header-cell {
 
 .mat-step-header .mat-step-icon-state-error {
     background-color: transparent;
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-step-header .mat-step-label.mat-step-label-active {
@@ -2491,7 +2491,7 @@ th.mat-header-cell {
 }
 
 .mat-step-header .mat-step-label.mat-step-label-error {
-    color: #f44336
+    color: #447ca8
 }
 
 .mat-stepper-horizontal,
@@ -2603,7 +2603,7 @@ th.mat-header-cell {
 
 .mat-tab-group.mat-warn .mat-ink-bar,
 .mat-tab-nav-bar.mat-warn .mat-ink-bar {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-tab-group.mat-warn.mat-background-warn .mat-ink-bar,
@@ -2720,7 +2720,7 @@ th.mat-header-cell {
 .mat-tab-group.mat-background-warn .mat-tab-links,
 .mat-tab-nav-bar.mat-background-warn .mat-tab-header,
 .mat-tab-nav-bar.mat-background-warn .mat-tab-links {
-    background-color: #f44336
+    background-color: #447ca8
 }
 
 .mat-tab-group.mat-background-warn .mat-tab-label,
@@ -2768,7 +2768,7 @@ th.mat-header-cell {
 }
 
 .mat-toolbar.mat-warn {
-    background: #f44336;
+    background: #447ca8 ;
     color: #fff
 }
 
@@ -2852,7 +2852,7 @@ th.mat-header-cell {
     &:enabled:focus {
         //outline: 2px dotted $primaryColor;
         // outline-offset: 1px;
-        background-color: lighten($primaryColorRed, 5%);
+        background-color: lighten($primaryColor, 5%);
     }
 
     &:enabled:active {
@@ -3006,8 +3006,7 @@ th.mat-header-cell {
 
 
 .mat-form-field-invalid .mat-input-element:hover {
-    caret-color: #f44336 !important;
-    border: 1px solid #EF5350 !important;
+    caret-color:  #EF5350  !important;
 }
 .mat-auto{
 

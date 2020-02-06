@@ -68,17 +68,17 @@
             }
 
             .ui-button {
-                color: #f44336;
+                color: #447ca8 ;
 
                 &.ui-state-hover {
                     @include hover-element();
-                    color: #f44336;
+                    color: #447ca8 ;
                 }
             }
         }
 
         .exception-band {
-            background-color: #f44336;
+            background-color: #447ca8 ;
 
             .exception-content {
                 color: #ffebee;

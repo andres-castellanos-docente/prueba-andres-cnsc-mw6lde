@@ -104,7 +104,7 @@ $colorInputInvalid: #2083d4;
     max-width: 50px;
     height: 55px;
     margin: auto;
-    background-color: #f44336;
+    background-color: #447ca8 ;
     color: #fff;
     text-align: center;
     border-radius: 4px;
@@ -149,7 +149,7 @@ $colorInputInvalid: #2083d4;
     max-width: 50px;
     height: 55px;
     margin: auto;
-    background-color: #f44336;
+    background-color: #447ca8 ;
     color: #fff;
     text-align: center;
     border-radius: 4px;
@@ -2310,4 +2310,14 @@ a:focus {
 
 .marginauto{
     margin: auto;
+}
+.mat-dialog-title {
+    margin: 0 0 10px!important;
+}
+.width140{
+    width:140px!important;
+}
+.ui-messages
+{
+    max-width: 320px
 }

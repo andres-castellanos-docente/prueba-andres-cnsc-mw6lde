@@ -22,10 +22,23 @@ import {DatePipe} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MAT_DATE_LOCALE} from "@angular/material/core";
+import {PreventDoubleClickDirective} from "./directives/buttonDoubleClick";
+import {OnlyNumerosDirective} from "./directives/onlyNumeros";
+import {OnlyDatesDirective} from "./directives/onlyDates";
+import {OnlyStringsDirective} from "./directives/onlyStrings";
+import {MessagesModule} from "primeng/messages";
+import {MessageModule} from "primeng/message";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule,
-    BrowserAnimationsModule, AppRoutes, MatDialogModule, MatFormFieldModule,
+    BrowserAnimationsModule, AppRoutes, MatDialogModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,
+    MessagesModule,
+    MessageModule,
+    MatMomentDateModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -34,8 +47,10 @@ import {MatFormFieldModule} from "@angular/material/form-field";
       }
     })],
   entryComponents: [TrabajadoresDialog],
-  declarations: [AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog],
-  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService],
+  declarations: [// Directivas
+    PreventDoubleClickDirective, OnlyNumerosDirective, OnlyDatesDirective, OnlyStringsDirective,
+    AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog],
+  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
