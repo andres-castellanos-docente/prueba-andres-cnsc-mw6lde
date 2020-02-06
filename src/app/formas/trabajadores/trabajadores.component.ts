@@ -8,12 +8,12 @@ import {
 import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import Utils from "../../statics/utils";
 import {TranslateService} from "@ngx-translate/core";
-import {Moment} from "moment";
 import {Message} from "primeng/api";
 import {trabajadorModel} from "./trabajador.model";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {ConfirmDialogComponent, ConfirmDialogModel} from "src/app/appbase/confirm-dialog/confirm-dialog.component";
+import {ConfirmDialogComponent, ConfirmDialogModel} from "../../appbase/confirm-dialog/confirm-dialog.component";
+
 
 
 export interface DialogData {
