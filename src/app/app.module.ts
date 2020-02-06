@@ -20,7 +20,7 @@ import {AppLoadingService} from "./appbase/apploading/app.loading.service";
 import {AppXsegundoService} from "./appbase/appclock/app.xsegundo.service";
 import {DatePipe} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatDialogModule} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
@@ -55,7 +55,8 @@ import {ConfirmDialogComponent} from "./appbase/confirm-dialog/confirm-dialog.co
   declarations: [// Directivas
     PreventDoubleClickDirective, OnlyNumerosDirective, OnlyDatesDirective, OnlyStringsDirective,
     AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog, ConfirmDialogComponent],
-  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
+  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService,{ provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: {} }, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

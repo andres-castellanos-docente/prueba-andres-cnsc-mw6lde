@@ -33,7 +33,7 @@ export class TrabajadoresComponent implements OnInit {
     dataSource: MatTableDataSource<trabajadorModel>;
     displayedColumns: string[] = ['nombreTrabaj', 'fecNac', 'edad', 'direccion', 'fecGrad', 'exp', 'email', 'editar', 'elim'];
 
-    constructor(public dialog: MatDialog, private translate: TranslateService, private snackBar: MatSnackBar) {
+    constructor(public dialog: MatDialog,public dialogconf: MatDialog, private translate: TranslateService, private snackBar: MatSnackBar) {
         this.trabNew = new trabajadorModel();
     }
 
@@ -48,9 +48,12 @@ export class TrabajadoresComponent implements OnInit {
     eliminar(ele: number) {
         const message = this.translate.instant('crear.confelim');
         const dialogData = new ConfirmDialogModel(this.translate.instant('crear.conftit'), message);
-        const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+
+        const dialogRef = this.dialogconf.open(ConfirmDialogComponent, {
             maxWidth: "400px",
-            data: dialogData
+            data:  {title: this.translate.instant('crear.conftit'),
+                message: message
+        }
         });
         dialogRef.afterClosed().subscribe(dialogResult => {
             const resp = dialogResult;
