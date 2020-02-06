@@ -13,6 +13,7 @@ import {trabajadorModel} from "./trabajador.model";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {ConfirmDialogComponent, ConfirmDialogModel} from "../../appbase/confirm-dialog/confirm-dialog.component";
+import {ConfirmDialogService} from "../../appbase/confirm-dialog/confirm-dialog.service";
 
 
 
@@ -33,7 +34,7 @@ export class TrabajadoresComponent implements OnInit {
     dataSource: MatTableDataSource<trabajadorModel>;
     displayedColumns: string[] = ['nombreTrabaj', 'fecNac', 'edad', 'direccion', 'fecGrad', 'exp', 'email', 'editar', 'elim'];
 
-    constructor(public dialog: MatDialog,public dialogconf: MatDialog, private translate: TranslateService, private snackBar: MatSnackBar) {
+    constructor(public dialog: MatDialog,private dialogService: ConfirmDialogService, private translate: TranslateService, private snackBar: MatSnackBar) {
         this.trabNew = new trabajadorModel();
     }
 
@@ -47,20 +48,19 @@ export class TrabajadoresComponent implements OnInit {
 
     eliminar(ele: number) {
         const message = this.translate.instant('crear.confelim');
-        const dialogData = new ConfirmDialogModel(this.translate.instant('crear.conftit'), message);
+        const options = {
+            title: this.translate.instant('crear.conftit'),
+            message: message
+        };
 
-        const dialogRef = this.dialogconf.open(ConfirmDialogComponent, {
-            maxWidth: "400px",
-            data:  {title: this.translate.instant('crear.conftit'),
-                message: message
-        }
-        });
-        dialogRef.afterClosed().subscribe(dialogResult => {
-            const resp = dialogResult;
-            if (resp === true) {
+        this.dialogService.open(options);
+
+        this.dialogService.confirmed().subscribe(confirmed => {
+            if (confirmed) {
                 this.eliminarconf(ele);
             }
         });
+
     }
 
     eliminarconf(ele: number) {

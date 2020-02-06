@@ -35,6 +35,7 @@ import {MessageModule} from "primeng/message";
 import {MatTableModule} from "@angular/material/table";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {ConfirmDialogComponent} from "./appbase/confirm-dialog/confirm-dialog.component";
+import {ConfirmDialogService} from "./appbase/confirm-dialog/confirm-dialog.service";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule,
@@ -55,7 +56,7 @@ import {ConfirmDialogComponent} from "./appbase/confirm-dialog/confirm-dialog.co
   declarations: [// Directivas
     PreventDoubleClickDirective, OnlyNumerosDirective, OnlyDatesDirective, OnlyStringsDirective,
     AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, ConfirmDialogComponent, TrabajadoresComponent, TrabajadoresDialog],
-  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService,{ provide: MatDialogRef, useValue: {} },
+  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService,ConfirmDialogService, { provide: MatDialogRef, useValue: {} },
     { provide: MAT_DIALOG_DATA, useValue: {} }, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
   bootstrap:    [ AppComponent ]
 })
