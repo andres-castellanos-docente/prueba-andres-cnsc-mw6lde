@@ -32,10 +32,15 @@ import {OnlyDatesDirective} from "./directives/onlyDates";
 import {OnlyStringsDirective} from "./directives/onlyStrings";
 import {MessagesModule} from "primeng/messages";
 import {MessageModule} from "primeng/message";
+import {MatTableModule} from "@angular/material/table";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {ConfirmDialogComponent} from "./appbase/confirm-dialog/confirm-dialog.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule,
     BrowserAnimationsModule, AppRoutes, MatDialogModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,
+    MatTableModule,
+    MatSnackBarModule,
     MessagesModule,
     MessageModule,
     MatMomentDateModule,
@@ -46,10 +51,10 @@ import {MessageModule} from "primeng/message";
         deps: [HttpClient]
       }
     })],
-  entryComponents: [TrabajadoresDialog],
+  entryComponents: [TrabajadoresDialog,ConfirmDialogComponent],
   declarations: [// Directivas
     PreventDoubleClickDirective, OnlyNumerosDirective, OnlyDatesDirective, OnlyStringsDirective,
-    AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog],
+    AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, TrabajadoresComponent, TrabajadoresDialog, ConfirmDialogComponent],
   providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
   bootstrap:    [ AppComponent ]
 })

@@ -1,4 +1,5 @@
-﻿<h1 *ngIf="diagCarg" [@subirAnimation] mat-dialog-title>{{'crear.creartrab' | translate}} </h1>
+﻿<h1 *ngIf="diagCarg && creando" [@subirAnimation] mat-dialog-title>{{'crear.creartrab' | translate}} </h1>
+<h1 *ngIf="diagCarg && !creando" [@subirAnimation] mat-dialog-title>{{'crear.editartrab' | translate}} </h1>
 <div *ngIf="diagCarg">
     <div mat-dialog-content [@bajarAnimationWait]>
         <p-messages  [(value)]="msgs"></p-messages>
@@ -39,8 +40,6 @@
             <div class="p-md-4">
                 <mat-form-field
                         [ngClass]="{ 'ng-invalid mat-form-field-invalid': submittedCrearTrab && regCrearTrab.controls.direccion.errors }">
-
-                    <!-- (-\d{1,3})(-\d{1,2}) -->
                     <input matInput type="text" formControlName="direccion" pattern="([a-zA-Z]{2,30}\s.{1,30}(-\d{1,3})[a-zA-Z]{0,1}(-\d{1,2})|[a-zA-Z]{2,30}\s.{1,30}(-\d{1,3})[a-zA-Z]{0,1}(-\d{1,2})\s.{0,30})"
                            autocomplete="off"
                            autocorrect="off" [maxLength]="70" spellcheck="false"
@@ -83,12 +82,16 @@
             </div>
         </form>
     </div>
+
     <div mat-dialog-actions class="marginauto" [@derAIzAnimation]>
+        <button mat-button appPreventDoubleClick *ngIf="creando"
+                class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray marginauto"
+                (click)="creareditar()" >{{'but.crear' | translate}}</button>
+        <button mat-button appPreventDoubleClick *ngIf="!creando"
+                class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray marginauto"
+                (click)="creareditar()" >{{'but.editar' | translate}}</button>
         <button mat-button appPreventDoubleClick
                 class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray marginauto"
-                (click)="crear()">{{'but.crear' | translate}}</button>
-        <button mat-button appPreventDoubleClick (click)="onNoClick()"
-                class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray marginauto"
-                [mat-dialog-close]="data" cdkFocusInitial>{{'but.cancel' | translate}}</button>
+                (click)="onNoClick()" cdkFocusInitial>{{'but.cancel' | translate}}</button>
     </div>
 </div>

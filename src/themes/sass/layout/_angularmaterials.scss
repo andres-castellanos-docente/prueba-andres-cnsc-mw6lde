@@ -3162,6 +3162,7 @@ th.mat-header-cell {
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
-.a{
 
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    padding-right: 10px!important;
 }

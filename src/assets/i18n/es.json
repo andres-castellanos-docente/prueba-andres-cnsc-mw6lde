@@ -7,6 +7,7 @@
   },
   "crear": {
     "creartrab": "Crear Trabajador",
+    "editartrab": "Editar Trabajador",
     "nombrecomp": "Nombre Completo",
     "fechanac": "Fecha Nacimiento",
     "fechagrad": "Fecha Grado",
@@ -20,11 +21,22 @@
     "direccionformat": "Formato Dirección Incorrecto",
     "direccionformatdet": "(Ej: Calle 61-4-22)",
     "exp": "Experiencia",
-    "debverf": "Upps! Debes Ingresar/Validar la Siguiente Información para Continuar"
+    "edit": "Editar",
+    "elim": "Eliminar",
+    "debverf": "Upps! Debes Ingresar/Validar la Siguiente Información para Continuar",
+    "cread": "Trabajador Creado 😃",
+    "elimin": "Trabajador Eliminado 😄",
+    "editad": "Trabajador Editado 😄",
+    "confelim": "¿Confirma Eliminar al Trabajador?",
+    "conftit": "Confirmación"
 
   },
   "but": {
     "crear": "Crear",
-    "cancel": "Cancelar"
+    "editar": "Editar",
+    "cancel": "Cancelar",
+    "elim": "Elim",
+    "edit": "Edit",
+    "acept": "Aceptar"
   }
 }
