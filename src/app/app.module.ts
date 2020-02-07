@@ -11,7 +11,11 @@ import {HttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate/core";
 import {AppRoutes} from "./app.routes";
-import {TrabajadoresComponent, TrabajadoresDialog} from "./formas/trabajadores/trabajadores.component";
+import {
+  ConfirmDialogComponent,
+  TrabajadoresComponent,
+  TrabajadoresDialog
+} from "./formas/trabajadores/trabajadores.component";
 import {AppLoadingService} from "./appbase/apploading/app.loading.service";
 import {AppXsegundoService} from "./appbase/appclock/app.xsegundo.service";
 import {DatePipe} from "@angular/common";
@@ -21,8 +25,6 @@ import {PreventDoubleClickDirective} from "./directives/buttonDoubleClick";
 import {OnlyNumerosDirective} from "./directives/onlyNumeros";
 import {OnlyDatesDirective} from "./directives/onlyDates";
 import {OnlyStringsDirective} from "./directives/onlyStrings";
-import {ConfirmDialogComponent} from "./appbase/confirm-dialog/confirm-dialog.component";
-import {ConfirmDialogService} from "./appbase/confirm-dialog/confirm-dialog.service";
 import {SharedModule} from "./shared.module";
 
 @NgModule({
@@ -38,7 +40,7 @@ import {SharedModule} from "./shared.module";
   declarations: [// Directivas
     PreventDoubleClickDirective, OnlyNumerosDirective, OnlyDatesDirective, OnlyStringsDirective,
     AppComponent, AppprincComponent, AppClockComponent, AppFooterComponent, AppLoadingComponent, AppMenuComponent, AppSidebarComponent, AppTopBarComponent, AppSubMenuComponent, ConfirmDialogComponent, TrabajadoresComponent, TrabajadoresDialog],
-  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService,ConfirmDialogService, { provide: MatDialogRef, useValue: {} },
+  providers: [AppXsegundoService, AppLoadingService, DatePipe, TranslateService, { provide: MatDialogRef, useValue: {} },
     { provide: MAT_DIALOG_DATA, useValue: {} }, {provide: MAT_DATE_LOCALE, useValue: navigator.language}],
   bootstrap:    [ AppComponent ]
 })

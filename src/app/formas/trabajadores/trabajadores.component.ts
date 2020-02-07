@@ -1,6 +1,7 @@
 ﻿import {Component, Inject, Injectable, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {
+    bajarAnimation,
     bajarAnimationWait,
     derAIzAnimation,
     IzADerAnimation, subirAnimation
@@ -12,8 +13,6 @@ import {Message} from "primeng/api";
 import {trabajadorModel} from "./trabajador.model";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {ConfirmDialogComponent, ConfirmDialogModel} from "../../appbase/confirm-dialog/confirm-dialog.component";
-import {ConfirmDialogService} from "../../appbase/confirm-dialog/confirm-dialog.service";
 
 
 
@@ -34,7 +33,7 @@ export class TrabajadoresComponent implements OnInit {
     dataSource: MatTableDataSource<trabajadorModel>;
     displayedColumns: string[] = ['nombreTrabaj', 'fecNac', 'edad', 'direccion', 'fecGrad', 'exp', 'email', 'editar', 'elim'];
 
-    constructor(public dialog: MatDialog,private dialogService: ConfirmDialogService, private translate: TranslateService, private snackBar: MatSnackBar) {
+    constructor(public dialog: MatDialog,private translate: TranslateService, private snackBar: MatSnackBar) {
         this.trabNew = new trabajadorModel();
     }
 
@@ -53,11 +52,14 @@ export class TrabajadoresComponent implements OnInit {
             message: message
         };
 
-        this.dialogService.open(options);
-
-        this.dialogService.confirmed().subscribe(confirmed => {
-            if (confirmed) {
-                this.eliminarconf(ele);
+        const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+            data: {trabajadorModel: this.trabNew, creando: true}
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            const eliminado: any = result;
+            //this.listatrab.push({ nombreTrabaj: trabcrea.nombreTrabaj, fecNac: null, edad: trabcrea.edad, fecGrad: null, exp: trabcrea.exp, direccion: trabcrea.direccion, email: trabcrea.email });
+            if (eliminado) {
+             this.eliminarconf(ele);
             }
         });
 
@@ -274,5 +276,43 @@ export class TrabajadoresDialog implements OnInit {
             return;
         }
         this.dialogRef.close(this.regCrearTrab.value);
+    }
+}
+@Component({
+    selector: 'app-confirm-dialog',
+    animations: [derAIzAnimation, IzADerAnimation, subirAnimation, bajarAnimation],
+    templateUrl: './confirm-dialog.component.html'
+})
+export class ConfirmDialogComponent implements OnInit {
+    title: string;
+    message: string;
+    diagCarg = false;
+
+    constructor(public dialogRef: MatDialogRef<ConfirmDialogComponent>,
+                @Inject(MAT_DIALOG_DATA) public data: any) {
+        this.title = data.title;
+        this.message = data.message;
+    }
+
+    ngOnInit() {
+        // Espera para que se realicen las animaciones de lo contrario choca con la animacion al abrir el dialog.
+        const self = this;
+        setTimeout(function b() {
+            self.diagCarg = true;
+        }, 100);
+    }
+
+    onConfirm(): void {
+        this.dialogRef.close(true);
+    }
+
+    onDismiss(): void {
+        this.dialogRef.close(false);
+    }
+}
+
+export class ConfirmDialogModel {
+
+    constructor(public title: string, public message: string) {
     }
 }
