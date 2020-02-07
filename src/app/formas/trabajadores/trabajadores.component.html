@@ -44,7 +44,7 @@
                 <ng-container matColumnDef="elim">
                     <th mat-header-cell *matHeaderCellDef> {{'crear.elim' | translate}} </th>
                     <td mat-cell *matCellDef="let element; let i = index">
-                        <button appPreventDoubleClick (click)="eliminar(i)"
+                        <button appPreventDoubleClick (click)="eliminar(element, i)"
                                 class="ui-button ui-widget ui-corner-all ui-button-text-only ui-button-padding ui-buttongray">
                             {{ 'but.elim' | translate }}</button>
                     </td>

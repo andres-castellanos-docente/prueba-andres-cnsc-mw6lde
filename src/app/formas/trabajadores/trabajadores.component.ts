@@ -45,21 +45,18 @@ export class TrabajadoresComponent implements OnInit {
         }
     }
 
-    eliminar(ele: number) {
-        const message = this.translate.instant('crear.confelim');
-        const options = {
-            title: this.translate.instant('crear.conftit'),
-            message: message
-        };
+    eliminar(trab: trabajadorModel, index: number) {
 
         const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-            data: {trabajadorModel: this.trabNew, creando: true}
+            data: {title: this.translate.instant('crear.conftit'), message:  this.translate.instant('crear.confelim'),
+                   nombre:  trab.nombreTrabaj}
         });
+
         dialogRef.afterClosed().subscribe(result => {
             const eliminado: any = result;
             //this.listatrab.push({ nombreTrabaj: trabcrea.nombreTrabaj, fecNac: null, edad: trabcrea.edad, fecGrad: null, exp: trabcrea.exp, direccion: trabcrea.direccion, email: trabcrea.email });
             if (eliminado) {
-             this.eliminarconf(ele);
+             this.eliminarconf(index);
             }
         });
 
@@ -286,12 +283,14 @@ export class TrabajadoresDialog implements OnInit {
 export class ConfirmDialogComponent implements OnInit {
     title: string;
     message: string;
+    nombre: string;
     diagCarg = false;
 
     constructor(public dialogRef: MatDialogRef<ConfirmDialogComponent>,
-                @Inject(MAT_DIALOG_DATA) public data: any) {
+                @Inject(MAT_DIALOG_DATA) public data: ConfirmDialogModel) {
         this.title = data.title;
         this.message = data.message;
+        this.nombre = data.nombre;
     }
 
     ngOnInit() {
@@ -313,6 +312,6 @@ export class ConfirmDialogComponent implements OnInit {
 
 export class ConfirmDialogModel {
 
-    constructor(public title: string, public message: string) {
+    constructor(public title: string, public message: string, public nombre: string) {
     }
 }
